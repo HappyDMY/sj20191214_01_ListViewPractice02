@@ -2,7 +2,7 @@ package com.example.sj20191214_01_listviewpractice02
 
 import android.os.Bundle
 
-class MainActivity : BassActivity() {
+class MainActivity : BaseActivity() {
     override fun setUpEvents() {
     }
 
