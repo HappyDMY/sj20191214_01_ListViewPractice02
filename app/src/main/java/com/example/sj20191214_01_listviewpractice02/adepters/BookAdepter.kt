@@ -7,10 +7,12 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 import com.example.sj20191214_01_listviewpractice02.R
+import com.example.sj20191214_01_listviewpractice02.datas.BookData
 import com.example.sj20191214_01_listviewpractice02.datas.GameData
+import java.util.ArrayList
 
-class GameAdepter(context:Context, resID: Int, list:ArrayList<GameData>)
-    :ArrayAdapter<GameData>(context, resID,list){
+class BookAdepter(context:Context, resID: Int, list: ArrayList<BookData>)
+    :ArrayAdapter<BookData>(context, resID,list){
 
     val mContext = context
     val mList = list
@@ -23,7 +25,7 @@ class GameAdepter(context:Context, resID: Int, list:ArrayList<GameData>)
 //
 //        }
         tempRow?.let {
-            tempRow = inf.inflate(R.layout.game_list_item, null)
+            tempRow = inf.inflate(R.layout.book_list_item, null)
 
         }
 
@@ -31,8 +33,8 @@ class GameAdepter(context:Context, resID: Int, list:ArrayList<GameData>)
 
         val data = mList.get(position)
 
-        val gameTitleTxt = row.findViewById<TextView>(R.id.gameTitleTxt)
-        val gameCompanyTxt= row.findViewById<TextView>(R.id.gameCompanyTxt)
+        val bookTitleTxt = row.findViewById<TextView>(R.id.bookTitleTxt)
+        val bookCompanyTxt= row.findViewById<TextView>(R.id.bookCompanyTxt)
 
         return row
     }

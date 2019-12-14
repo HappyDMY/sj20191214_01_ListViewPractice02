@@ -27,7 +27,9 @@ class MainActivity : BaseActivity() {
 
             val clickedGameData = gameList.get(position)
 
-            Toast.makeText(mContext, "${clickedGameData.title} 을 삭제하려고 함", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(mContext, "${clickedGameData.title} 을 삭제하려고 함", Toast.LENGTH_SHORT).show()
+
+            gameList.removeAt(position)
 
             return@setOnItemLongClickListener true
         }
