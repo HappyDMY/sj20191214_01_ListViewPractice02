@@ -2,10 +2,13 @@ package com.example.sj20191214_01_listviewpractice02
 
 import android.os.Bundle
 import android.os.UserHandle
+import com.example.sj20191214_01_listviewpractice02.adepters.GameAdepter
 import com.example.sj20191214_01_listviewpractice02.datas.GameData
 import java.util.ArrayList
 
 class MainActivity : BaseActivity() {
+
+    var gameAdepter:GameAdepter? = null
 
     val gameList = ArrayList<GameData>()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +23,8 @@ class MainActivity : BaseActivity() {
 
     override fun setValues() {
         addGames()
+        gameAdepter = GameAdepter(mContext, R.layout.game_list_item,gameList)
+        gameListView.adapter = gameAdepter
     }
 
     fun addGames(){
